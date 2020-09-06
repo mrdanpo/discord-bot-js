@@ -1,0 +1,4 @@
+.vscode
+env-variables.env
+src/node_modules
+src/assets
