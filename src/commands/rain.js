@@ -4,7 +4,8 @@ module.exports = {
 	async execute(message, args) {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
-            connection.play('../assets/rain.mp4');
+            // must be absolute path
+            connection.play((require("path").join(__dirname, '../assets/rain.mp4')));
         }
 	},
 };
